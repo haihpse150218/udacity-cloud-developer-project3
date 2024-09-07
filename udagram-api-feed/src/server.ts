@@ -11,7 +11,11 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
 
 (async () => {
   await sequelize.addModels(V0_FEED_MODELS);
-
+  console.debug("aws");
+  console.debug(config.host);
+  console.debug(config.username);
+  console.debug("===============");
+  console.debug(JSON.stringify(config));
   console.debug("Initialize database connection...");
   await sequelize.sync();
 
