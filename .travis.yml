@@ -17,7 +17,7 @@ script:
   - docker tag reverseproxy haihpse150218/reverseproxy-deploy:latest
   - docker tag udagram-api-user haihpse150218/udagram-api-user-deploy:latest
   - docker tag udagram-api-feed haihpse150218/udagram-api-feed-deploy:latest
-  - docker tag udagram-frontend:local haihpse150218/udagram-frontend-deploy:latest
+  - docker tag udagram-frontend:local haihpse150218/udagram-frontend-deploy:pro
 
 
 # Log in to Docker Hub and push images
@@ -26,7 +26,7 @@ after_success:
   - docker push haihpse150218/reverseproxy-deploy
   - docker push haihpse150218/udagram-api-user-deploy
   - docker push haihpse150218/udagram-api-feed-deploy
-  - docker push haihpse150218/udagram-frontend-deploy:latest
+  - docker push haihpse150218/udagram-frontend-deploy:pro
 
 # Optional: Define environment variables
 # env:

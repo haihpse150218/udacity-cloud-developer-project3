@@ -17,12 +17,22 @@
 ![alt text](image-8.png)
 
 ## To verify that you have horizontal scaling set against CPU usage
+![alt text](image-14.png)
 ![alt text](image-12.png)
+![alt text](image-15.png)
+
+    **Im test spam:**
+![alt text](image-17.png)
+![alt text](image-16.png)
+
+
 
 ## To verify that you have set up logging with a backend application
 ![alt text](image-9.png)
 
 ![alt text](image-10.png)
+
+![alt text](image-13.png)
 
 # Run My App:
 Link: http://a175ed04c517f41a0aa6e09115a876b0-1145002124.us-east-1.elb.amazonaws.com/
