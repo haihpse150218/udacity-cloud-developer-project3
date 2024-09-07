@@ -14,7 +14,6 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
 
   console.debug("Initialize database connection...");
   await sequelize.sync();
-
   const app = express();
   const port = process.env.PORT || 8080;
 
@@ -33,11 +32,12 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
     preflightContinue: true,
     origin: '*',
   }));
-
+  console.log('check1-========================================')
   app.use('/api/v0/', IndexRouter);
 
   // Root URI call
   app.get( '/', async ( req, res ) => {
+    console.log('check-========================================')
     res.send( '/api/v0/' );
   } );
 
