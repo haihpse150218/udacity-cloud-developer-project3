@@ -14,19 +14,19 @@ script:
   - docker build -t udagram-api-feed ./udagram-api-feed
   - docker build -t udagram-frontend:local ./udagram-frontend
   
-  - docker tag reverseproxy haihpse150218/reverseproxy:latest
-  - docker tag udagram-api-user haihpse150218/udagram-api-user:latest
-  - docker tag udagram-api-feed haihpse150218/udagram-api-feed:latest
-  - docker tag udagram-frontend:local haihpse150218/udagram-frontend:latest
+  - docker tag reverseproxy haihpse150218/reverseproxy-deploy:latest
+  - docker tag udagram-api-user haihpse150218/udagram-api-user-deploy:latest
+  - docker tag udagram-api-feed haihpse150218/udagram-api-feed-deploy:latest
+  - docker tag udagram-frontend:local haihpse150218/udagram-frontend-deploy:latest
 
 
 # Log in to Docker Hub and push images
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push haihpse150218/reverseproxy
-  - docker push haihpse150218/udagram-api-user
-  - docker push haihpse150218/udagram-api-feed
-  - docker push haihpse150218/udagram-frontend:latest
+  - docker push haihpse150218/reverseproxy-deploy
+  - docker push haihpse150218/udagram-api-user-deploy
+  - docker push haihpse150218/udagram-api-feed-deploy
+  - docker push haihpse150218/udagram-frontend-deploy:latest
 
 # Optional: Define environment variables
 # env:
